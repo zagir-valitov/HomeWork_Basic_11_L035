@@ -17,23 +17,15 @@ dictionary[32] = "Республика Карелия";
 dictionary[66] = "Свердловская область";
 dictionary[69] = "Тверская область";
 
-try
-{
-    Console.WriteLine(dictionary.Get(1));
-    Console.WriteLine(dictionary.Get(2));
-    Console.WriteLine(dictionary.Get(3));
-    Console.WriteLine(dictionary.Get(4));
-    Console.WriteLine(dictionary.Get(5));
-    Console.WriteLine(dictionary[6]);
-    Console.WriteLine(dictionary[7]);
-    Console.WriteLine(dictionary[8]);
-    Console.WriteLine(dictionary[9]);
-    Console.WriteLine(dictionary[32]);
-    Console.WriteLine(dictionary[66]);
-    Console.WriteLine(dictionary[69]);
-}
-catch (ArgumentOutOfRangeException ex)
-{
-    Console.WriteLine(ex.Message);
-}
-
+Console.WriteLine(dictionary.Get(1));
+Console.WriteLine(dictionary.Get(2));
+Console.WriteLine(dictionary.Get(3));
+Console.WriteLine(dictionary.Get(4));
+Console.WriteLine(dictionary.Get(5));
+Console.WriteLine(dictionary[6]);
+Console.WriteLine(dictionary[7]);
+Console.WriteLine(dictionary[8]);
+Console.WriteLine(dictionary[9]);
+Console.WriteLine(dictionary[32]);
+Console.WriteLine(dictionary[66]);
+Console.WriteLine(dictionary[69]);
