@@ -32,15 +32,15 @@ internal class OtusDictionary()
     {
         return key % Capacity;        
     }
-    public void Add(int key, string? value) 
+    public void Add(int key, string? word) 
     {
-        if (value is not null)
+        if (word is not null)
         {
             int hashKey = GetHashKey(key);
             if (_words[hashKey].Value is null)
             {
                 _words[hashKey].Key = key;
-                _words[hashKey].Value = value;
+                _words[hashKey].Value = word;
                 Size++;
             }
             else
@@ -51,11 +51,11 @@ internal class OtusDictionary()
                 Capacity *= 2;
                 _words = new Entry[Capacity];
                                 
-                foreach (var word in buffer)
+                foreach (var item in buffer)
                 {
-                    _words[GetHashKey(word.Key)] = word;                    
+                    _words[GetHashKey(item.Key)] = item;                    
                 }
-                Add(key, value);
+                Add(key, word);
             }
         }
     }
