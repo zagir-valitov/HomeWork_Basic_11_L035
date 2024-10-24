@@ -61,13 +61,6 @@ internal class OtusDictionary()
     }
     public string? Get(int key)
     {
-        if (key >= 0 && GetHashKey(key) <= Capacity)
-        {
-            return _words[GetHashKey(key)].Value;
-        }
-        else
-        {
-            throw new ArgumentOutOfRangeException();
-        }
+        return _words[GetHashKey(key)].Value;       
     }    
 }
